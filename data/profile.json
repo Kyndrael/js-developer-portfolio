@@ -1,37 +1,44 @@
-const profile = {
-  name: "Jonathan Vieira da Silveira",
-  job: "Analista de sistemas",
-  location: "Nova Iguaçu - RJ",
-  phone: "(21) 97671-4945",
-  email: "jonathansilveira95@hotmail.com",
-  socialMedia: {
-    linkedin: "https://www.linkedin.com/in/jonathan-silveira-b5057122a/",
-    github: "https://github.com/Kyndrael",
+{
+  "name": "Jonathan Vieira da Silveira",
+  "job": "Analista de sistemas",
+  "location": "Nova Iguaçu - RJ",
+  "phone": "(21) 97671-4945",
+  "email": "jonathansilveira95@hotmail.com",
+  
+  "socialMedia": {
+    "linkedin": "https://www.linkedin.com/in/jonathan-vieira-da-silveira",
+    "github": "https://github.com/jonathansilveira"
+  },
+
+  "skills": {
+    "hardSkills": [
+      {
+        "name": "Java",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/javascript.png"
+      }
+    ],
+    "softSkills": [
+      "Proatividade",
+      "Liderança",
+      "Trabalho em equipe",
+      "Flexibilidade",
+      "Organização"
+    ]
+  },
+
+  "languages": [
+    "Português BR",
+    "Inglês (intermediário)"
+  ],
+
+  "theme": {
+    "darkMode": true,
+    "primaryColor": "#4CAF50",
+    "secondaryColor": "#212121",
+    "font": "Roboto"
   }
-};
-
-// Preencher dados pessoais
-document.getElementById("name").innerText = profile.name;
-document.getElementById("job").innerText = profile.job;
-document.getElementById("location").innerText = profile.location;
-document.getElementById("email").innerText = profile.email;
-document.getElementById("phone").innerText = profile.phone;
-
-// Gerar ícones das redes sociais
-const icons = {
-  linkedin: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-  github: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-};
-
-const social = profile.socialMedia;
-let links = "";
-
-for (let rede in social) {
-  links += `
-    <a href="${social[rede]}" target="_blank" title="${rede}">
-      <img class="icon" src="${icons[rede]}" alt="${rede}" />
-    </a>
-  `;
 }
-
-document.getElementById("socialLinks").innerHTML = links;
